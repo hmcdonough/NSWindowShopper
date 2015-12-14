@@ -43,4 +43,20 @@ class ProfileViewController : UIViewController {
 
         self.title = testProfile!.displayName
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+
+        UIView.animateWithDuration(1, animations: {
+            self.profileImage.alpha = 1
+        })
+        
+        UIView.animateWithDuration(1, delay: 0.5, options: UIViewAnimationOptions.BeginFromCurrentState, animations: {
+            self.profileName.alpha = 1
+            self.profileRating.alpha = 1
+            self.profileMemberSince.alpha = 1
+            self.ratingStar.alpha = 1
+            }, completion: nil)
+    }
+    
 }
