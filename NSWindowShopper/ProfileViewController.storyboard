@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xC5-YZ-YAU">
-                                <rect key="frame" x="272.5" y="275" width="56" height="25.5"/>
+                                <rect key="frame" x="272" y="275" width="56" height="25.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -31,6 +31,13 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="updateOnTouch" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSe-aW-2am">
+                                <rect key="frame" x="276" y="468" width="49" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AcM-uC-oBb">
                                 <rect key="frame" x="225" y="83" width="150" height="150"/>
                                 <animations/>
@@ -45,18 +52,16 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSe-aW-2am">
-                                <rect key="frame" x="276" y="468" width="49" height="20.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F0K-fC-smK">
+                                <rect key="frame" x="225" y="83" width="150" height="150"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                         </subviews>
                         <animations/>
                         <constraints>
                             <constraint firstItem="ijd-UZ-aen" firstAttribute="centerX" secondItem="cV3-4K-J7B" secondAttribute="centerX" id="1EV-g6-OQg"/>
                             <constraint firstItem="RSe-aW-2am" firstAttribute="centerX" secondItem="cV3-4K-J7B" secondAttribute="centerX" id="4so-Hn-oWx"/>
+                            <constraint firstItem="F0K-fC-smK" firstAttribute="top" secondItem="LHW-3g-akJ" secondAttribute="bottom" constant="63" id="6C6-ha-gIw"/>
                             <constraint firstItem="rqN-Ae-5av" firstAttribute="top" secondItem="3vz-KK-pEu" secondAttribute="bottom" constant="72" id="Dz7-Pu-22Q">
                                 <variation key="heightClass=compact" constant="20"/>
                                 <variation key="heightClass=compact-widthClass=compact" constant="8"/>
@@ -84,6 +89,9 @@
                                 <variation key="heightClass=compact-widthClass=compact" constant="8"/>
                             </constraint>
                             <constraint firstItem="3vz-KK-pEu" firstAttribute="centerX" secondItem="cV3-4K-J7B" secondAttribute="centerX" id="gCJ-Qe-oef"/>
+                            <constraint firstItem="F0K-fC-smK" firstAttribute="centerX" secondItem="cV3-4K-J7B" secondAttribute="centerX" id="hKq-cl-Gqj"/>
+                            <constraint firstItem="F0K-fC-smK" firstAttribute="bottom" secondItem="AcM-uC-oBb" secondAttribute="bottom" id="oF1-FP-o8a"/>
+                            <constraint firstItem="F0K-fC-smK" firstAttribute="leading" secondItem="AcM-uC-oBb" secondAttribute="leading" id="oKH-g6-64u"/>
                             <constraint firstItem="xC5-YZ-YAU" firstAttribute="centerX" secondItem="cV3-4K-J7B" secondAttribute="centerX" id="uZg-EU-dtV"/>
                         </constraints>
                         <variation key="default">
@@ -98,6 +106,7 @@
                         <outlet property="profileName" destination="xC5-YZ-YAU" id="BCU-LI-xzo"/>
                         <outlet property="profileRating" destination="RSe-aW-2am" id="pTb-bS-ifY"/>
                         <outlet property="ratingStar" destination="3vz-KK-pEu" id="6Hq-os-JHE"/>
+                        <outlet property="shadowView" destination="F0K-fC-smK" id="3Kf-AQ-IPz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qh5-fE-SI6" userLabel="First Responder" sceneMemberID="firstResponder"/>

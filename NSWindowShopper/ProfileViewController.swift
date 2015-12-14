@@ -16,6 +16,7 @@ class ProfileViewController : UIViewController {
     @IBOutlet weak var profileMemberSince: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var ratingStar: CosmosView!
+    @IBOutlet weak var shadowView: UIView!
     
     var testProfile : Profile? //= Profile(displayName: "Harry McDonough", dateJoined: NSDate(), ratingScore: 3.7, ratingCount: 47, avatarURL: "https://graph.facebook.com/1069772458/picture?type=normal&return_ssl_resources=true")
     
@@ -59,4 +60,13 @@ class ProfileViewController : UIViewController {
             }, completion: nil)
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        shadowView.layer.shadowColor = UIColor.blackColor().CGColor
+        shadowView.layer.shadowOffset = CGSizeZero
+        shadowView.layer.shadowOpacity = 0.7
+        shadowView.layer.shadowRadius = 15
+        shadowView.addSubview(profileImage)
+    }
 }
