@@ -30,6 +30,8 @@ class ProfileViewController : UIViewController {
         }
         
         profileImage.clipsToBounds = true
+        profileImage.contentMode = UIViewContentMode.ScaleAspectFill
+        profileImage.layer.cornerRadius = 5
         
         profileName.text = testProfile!.displayName
         
